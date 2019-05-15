@@ -14,14 +14,14 @@ if( !defined( 'WPINC' ) ){
 // demo import file
 function repair_import_files() {
 	
-	$demoImg = '<img src="'.plugins_url( 'screen-image.png', __FILE__ ) .'" alt="'.esc_attr__( 'Demo Preview Imgae', 'repair' ).'" />';
+	$demoImg = '<img src="'. REPAIR_COMPANION_DEMO_DIR_URL. 'screen-image.png" alt="'.esc_attr__( 'Demo Preview Imgae', 'repair' ).'" />';
 	
   return array(
     array(
       'import_file_name'             => 'Repair Demo',
       'local_import_file'            => REPAIR_COMPANION_DEMO_DIR_PATH .'repair-demo.xml',
       'local_import_widget_file'     => REPAIR_COMPANION_DEMO_DIR_PATH .'repair-widgets-demo.json',
-      'import_customizer_file_url'   => plugins_url( 'repair-customizer.dat', __FILE__ ),
+      'import_customizer_file_url'   => REPAIR_COMPANION_DEMO_DIR_URL .'repair-customizer.dat',
       'import_notice' => $demoImg,
     ),
   );
@@ -73,7 +73,7 @@ function repair_demo_import_custom_scripts(){
 	
 	if( isset( $_GET['page'] ) && $_GET['page'] == 'repair-demo-import' ){
 		// style
-		wp_enqueue_style( 'repair-demo-import', plugins_url( 'css/demo-import.css', __FILE__ ), array(), '1.0', false );
+		wp_enqueue_style( 'repair-demo-import', REPAIR_COMPANION_DEMO_DIR_URL . 'css/demo-import.css', array(), '1.0', false );
 	}
 	
 	

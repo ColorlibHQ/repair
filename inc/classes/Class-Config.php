@@ -83,7 +83,13 @@ final class Repair {
         add_theme_support( 'title-tag' );
         
         // support logo
-        add_theme_support( 'custom-logo' );
+        add_theme_support( 'custom-logo', array(
+            'height'      => 40,
+            'width'       => 130,
+            'flex-height' => true,
+            'flex-width'  => true,
+            'header-text' => array( 'site-title', 'site-description' ),
+        ) );
         
         //  support post format
         add_theme_support( 'post-formats', array( 'video','audio' ) );
@@ -103,12 +109,13 @@ final class Repair {
 		) );
         
         // support custom header
-		add_theme_support(
-			'custom-header',
-			array(
-				'header-text' => false,
-			)
-		);
+		add_theme_support( 'custom-header', array(
+            'flex-width'    => true,
+            'width'         => 1920,
+            'flex-height'    => true,
+            'height'        => 350,
+            'default-image' => get_template_directory_uri() . '/assets/img/banner-bg.jpg',
+        ) );
         
         // support automatic feed links
         add_theme_support( 'automatic-feed-links' );

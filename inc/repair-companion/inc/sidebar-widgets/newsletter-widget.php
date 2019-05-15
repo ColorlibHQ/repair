@@ -68,7 +68,7 @@ class repair_newsletter_widget extends WP_Widget {
                     </div>
                 </div>
                 <button type="submit" class="btn bb-btn">
-                    <span class="Subcribe">Subcribe</span>
+                    <span class="Subcribe"><?php echo esc_html__('Subcribe', 'repair') ?></span>
                     <span class="lnr lnr-location"></span>
                 </button>
             </div>

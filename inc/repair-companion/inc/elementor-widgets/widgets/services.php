@@ -80,7 +80,7 @@ class Repair_Services extends Widget_Base {
 		);
 		$this->add_control(
             'services_content', [
-                'label' => __( 'Create Training', 'repair' ),
+                'label' => __( 'Create Service', 'repair' ),
                 'type'  => Controls_Manager::REPEATER,
                 'title_field' => '{{{ label }}}',
                 'fields' => [

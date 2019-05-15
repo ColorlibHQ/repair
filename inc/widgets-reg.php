@@ -18,6 +18,7 @@ function repair_widgets_init() {
         array(
             'name'          => esc_html__( 'Sidebar', 'repair' ),
             'id'            => 'repair-post-sidebar',
+            'description'   => esc_html__( 'Add widgets here to appear in your sidebar.', 'repair' ),
             'before_widget' => '<div id="%1$s" class="single-widget single-sidebar-widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h4 class="widgets-title">',
@@ -30,6 +31,7 @@ function repair_widgets_init() {
         array(
             'name'          => esc_html__( 'Footer One', 'repair' ),
             'id'            => 'footer-1',
+            'description'   => esc_html__( 'Add widgets here to appear in your Footer.', 'repair' ),
             'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h6>',

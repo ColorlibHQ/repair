@@ -15,6 +15,7 @@ if( ! defined( 'WPINC' ) ) {
 add_image_size( 'repair_260x180', 260, 180, true );
 
 
+
 // Instagram object Instance
 function repair_instagram_instance() {
     
@@ -108,7 +109,7 @@ function repair_contact7_form_content( $template, $prop ) {
     if ( 'form' == $prop ) {
 
         $template =
-            '<div class="row"><div class="col-lg-12 d-flex flex-column">[text* name class:form-control class:mt-20 placeholder "Your name"]</div><div class="col-lg-6 d-flex flex-column">[text* phone class:form-control class:mt-20 placeholder "Phone"]</div><div class="col-lg-6 d-flex flex-column">[email* email-23 class:form-control class:mt-20 placeholder "Email"]</div><div class="col-lg-12 flex-column">[textarea* textarea-278 class:form-control class:mt-20 rows:5 placeholder "Message"]</div><div class="col-lg-12 d-flex justify-content-end send-btn">[submit class:genric-btn class:primary class:mt-20 class:text-uppercase "Get Estimate"]</div></div>';
+            '<div class="row"><div class="col-lg-6 form-group">[text* text-299 class:common-input class:mb-20 class:form-control placeholder "Enter your name"][email* email-836 class:common-input class:mb-20 class:form-control placeholder "Enter email address"][text* text-299 class:common-input class:mb-20 class:form-control placeholder "Enter your subject"]</div><div class="col-lg-6 form-group">[textarea* textarea-697 class:common-textarea class:form-control placeholder "Message"]</div><div class="col-lg-12"><div class="alert-msg" style="text-align: left;"></div>[submit class:cp-btn class:genric-btn class:primary class:circle "Send Message"]</div></div>';
 
         return $template;
 

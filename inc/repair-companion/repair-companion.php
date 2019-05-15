@@ -60,6 +60,16 @@ if( ! defined( 'REPAIR_COMPANION_INC_DIR_URL' ) ) {
     define( 'REPAIR_COMPANION_INC_DIR_URL', REPAIR_COMPANION_DIR_URL . '/inc/' );
 }
 
+// Define Repair Meta dir url constant
+if( ! defined( 'REPAIR_COMPANION_META_DIR_URL' ) ) {
+    define( 'REPAIR_COMPANION_META_DIR_URL', REPAIR_COMPANION_INC_DIR_URL . 'repair-meta/' );
+}
+
+// Define elementor-widgets dir url constant
+if( ! defined( 'REPAIR_COMPANION_DEMO_DIR_URL' ) ) {
+    define( 'REPAIR_COMPANION_DEMO_DIR_URL', REPAIR_COMPANION_INC_DIR_URL . 'demo-data/' );
+}
+
 // Define elementor-widgets dir url constant
 if( ! defined( 'REPAIR_COMPANION_EW_DIR_URL' ) ) {
     define( 'REPAIR_COMPANION_EW_DIR_URL', REPAIR_COMPANION_INC_DIR_URL . 'elementor-widgets/' );

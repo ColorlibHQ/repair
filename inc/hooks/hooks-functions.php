@@ -49,10 +49,10 @@ if( ! function_exists( 'repair_footer_area' ) ) {
 
 		$footerWidget = repair_opt( 'repair-widget-toggle-settings', false );
 
-		$noWidgets = ! empty( $footerWidget ) ? '' : ' no-widgets';
+		$noWidgets = ! empty( $footerWidget ) ? 'section-gap' : ' no-widgets';
 
 		if( ! is_404() ) {
-			echo '<footer class="footer-area section-gap'.esc_attr( $noWidgets ).'">';
+			echo '<footer class="footer-area '.esc_attr( $noWidgets ).'">';
 
 			// Footer widget
 

@@ -241,10 +241,6 @@ class Epsilon_Dashboard_Setup {
 				'integration' => true,
 				'recommended' => false,
 			),
-			'repair' => array(
-				'integration' => true,
-				'recommended' => false,
-			),
 			'elementor' => array(
 				'integration' => true,
 				'recommended' => false,
@@ -253,20 +249,11 @@ class Epsilon_Dashboard_Setup {
 				'integration' => true,
 				'recommended' => false,
 			),
-			'simple-custom-post-order'  => array(
-				'integration' => false,
-				'recommended' => true,
-			),
-			'colorlib-login-customizer' => array(
-				'integration' => false,
-				'recommended' => true,
-			),
 
 		);
 
 		if ( ! $integrated ) {
 			unset( $arr['contact-form-7'] );
-			unset( $arr['repair'] );
 			unset( $arr['elementor'] );
 			unset( $arr['one-click-demo-import'] );
 		}
@@ -299,21 +286,7 @@ class Epsilon_Dashboard_Setup {
 					),
 				),
 			),
-			array(
-				'id'          => 'repair-check-ac',
-				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'repair', 'title', 'Repair Companion' ),
-				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'repair', 'description', 'Repair Companion' ),
-				'plugin_slug' => 'repair',
-				'state'       => false,
-				'check'       => defined( 'REPAIR_COMPANION_VERSION' ),
-				'actions'     => array(
-					array(
-						'label'   => Epsilon_Init_Notify_System::plugin_verifier( 'repair', 'installed', 'Repair Companion' ) ? __( 'Activate Plugin', 'repair' ) : __( 'Install Plugin', 'repair' ),
-						'type'    => 'handle-plugin',
-						'handler' => Epsilon_Init_Notify_System::plugin_verifier( 'repair', 'installed', 'Repair Companion' ),
-					),
-				),
-			),
+
 			array(
 				'id'          => 'repair-check-elementor',
 				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'elementor', 'title', 'Elementor' ),
@@ -343,16 +316,8 @@ class Epsilon_Dashboard_Setup {
 						'handler' => Epsilon_Init_Notify_System::plugin_verifier( 'one-click-demo-import', 'installed', 'One Click Demo Import' ),
 					),
 				),
-			),
-			array(
-				'id'          => 'repair-check-demoimport',
-				'title'       => __( 'To import demo data go to Appearance > Import Demo Data', 'repair' ),
-				'description' => __( 'Before import demo data make sure your install one click demo import plugin.', 'repair' ),
-				'plugin_slug' => '',
-				'state'       => false,
-				'check'       => !empty( get_option( 'repair_demodata_import' ) ) ? true : false,
-				'actions'     => array(),
 			)
+
 		);
 	}
 
@@ -370,23 +335,16 @@ class Epsilon_Dashboard_Setup {
 				'check'       => defined( 'WPCF7_VERSION' ),
 			),
 			array(
-				'id'          => 'repair-check-ac',
-				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'repair', 'title', 'Repair Companion' ),
-				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'repair', 'description', 'Repair Companion' ),
-				'plugin_slug' => 'repair',
-				'check'       => defined( 'REPAIR_COMPANION_VERSION' ),
-			),
-			array(
 				'id'          => 'repair-check-elementor',
-				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'elementor', 'title', 'Elementor' ),
-				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'elementor', 'description', 'Elementor' ),
+				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'elementor', 'title', 'Elementor', 'verify_elementor' ),
+				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'elementor', 'description', 'Elementor', 'verify_elementor' ),
 				'plugin_slug' => 'elementor',
 				'check'       => defined( 'ELEMENTOR_VERSION' ),
 			),
 			array(
 				'id'          => 'repair-check-ocdi',
-				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'one-click-demo-import', 'title', 'One Click Demo Import' ),
-				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'one-click-demo-import', 'description', 'One Click Demo Import' ),
+				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'one-click-demo-import', 'title', 'One Click Demo Import', 'verify_ocdi' ),
+				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'one-click-demo-import', 'description', 'One Click Demo Import', 'verify_ocdi' ),
 				'plugin_slug' => 'one-click-demo-import',
 				'check'       => defined( 'PT_OCDI_VERSION' ),
 			),

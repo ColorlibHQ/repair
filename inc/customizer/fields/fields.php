@@ -16,7 +16,6 @@ if( ! defined( 'ABSPATH' ) ) {
  * General Section Fields
  ***********************************/
 
-
 // Theme Main Color Picker
 Epsilon_Customizer::add_field(
     'repair_themecolor',

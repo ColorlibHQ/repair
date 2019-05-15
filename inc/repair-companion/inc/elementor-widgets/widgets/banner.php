@@ -43,8 +43,6 @@ class Repair_Banner extends Widget_Base {
 
 	protected function _register_controls() {
 
-		$repeater = new \Elementor\Repeater();
-
         // ----------------------------------------  content ------------------------------
         $this->start_controls_section(
             'banner_content',
@@ -249,7 +247,7 @@ class Repair_Banner extends Widget_Base {
             'bg_overlay',
             [
                 'label' => __( 'Overlay', 'repair' ),
-                'type' => \Elementor\Controls_Manager::SWITCHER,
+                'type' => Controls_Manager::SWITCHER,
                 'label_on' => __( 'Show', 'repair' ),
                 'label_off' => __( 'Hide', 'repair' ),
                 'return_value' => 'yes',
@@ -260,7 +258,7 @@ class Repair_Banner extends Widget_Base {
             'sect_ooverlay_bgcolor',
             [
                 'label'     => __( 'Overlay Color', 'repair' ),
-                'type'      => \Elementor\Controls_Manager::HEADING,
+                'type'      => Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => [
                     'bg_overlay' => 'yes'
@@ -283,7 +281,7 @@ class Repair_Banner extends Widget_Base {
             'section_bgheading',
             [
                 'label'     => __( 'Background Settings', 'repair' ),
-                'type'      => \Elementor\Controls_Manager::HEADING,
+                'type'      => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
         );
@@ -309,7 +307,7 @@ class Repair_Banner extends Widget_Base {
 
     ?>
 
-    <section class="banner-area relative" id="home">
+    <section class="banner-area relative">
         <div class="container">
             <div class="row fullscreen d-flex align-items-center">
                 <div class="banner-content col-lg-7 col-md-6 justify-content-center">

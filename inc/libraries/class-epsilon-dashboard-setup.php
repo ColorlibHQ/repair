@@ -333,18 +333,19 @@ class Epsilon_Dashboard_Setup {
 				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'contact-form-7', 'description', 'Contact Form 7', 'verify_cf7' ),
 				'plugin_slug' => 'contact-form-7',
 				'check'       => defined( 'WPCF7_VERSION' ),
+
 			),
 			array(
 				'id'          => 'repair-check-elementor',
-				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'elementor', 'title', 'Elementor', 'verify_elementor' ),
-				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'elementor', 'description', 'Elementor', 'verify_elementor' ),
+				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'elementor', 'title', 'Elementor' ),
+				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'elementor', 'description', 'Elementor' ),
 				'plugin_slug' => 'elementor',
 				'check'       => defined( 'ELEMENTOR_VERSION' ),
 			),
 			array(
 				'id'          => 'repair-check-ocdi',
-				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'one-click-demo-import', 'title', 'One Click Demo Import', 'verify_ocdi' ),
-				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'one-click-demo-import', 'description', 'One Click Demo Import', 'verify_ocdi' ),
+				'title'       => Epsilon_Init_Notify_System::plugin_verifier( 'one-click-demo-import', 'title', 'One Click Demo Import' ),
+				'description' => Epsilon_Init_Notify_System::plugin_verifier( 'one-click-demo-import', 'description', 'One Click Demo Import' ),
 				'plugin_slug' => 'one-click-demo-import',
 				'check'       => defined( 'PT_OCDI_VERSION' ),
 			),

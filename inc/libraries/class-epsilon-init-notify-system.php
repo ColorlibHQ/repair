@@ -82,30 +82,5 @@ class Epsilon_Init_Notify_System extends Epsilon_Notify_System {
 
 		return $arr;
 	}
-//	public static function verify_elementor() {
-//		$arr = array(
-//			'installed' => false,
-//			'active'    => false,
-//		);
-//
-//		if ( file_exists( ABSPATH . 'wp-content/plugins/elementor' ) ) {
-//			$arr['installed'] = true;
-//			$arr['active']    = defined( 'ELEMENTOR_VERSION' );
-//		}
-//
-//		return $arr;
-//	}
-//	public static function verify_ocdi() {
-//		$arr = array(
-//			'installed' => false,
-//			'active'    => false,
-//		);
-//
-//		if ( file_exists( ABSPATH . 'wp-content/plugins/one-click-demo-import' ) ) {
-//			$arr['installed'] = true;
-//			$arr['active']    = defined( 'PT_OCDI_VERSION' );
-//		}
-//
-//		return $arr;
-//	}
+
 }

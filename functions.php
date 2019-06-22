@@ -69,7 +69,11 @@ if( ! defined( 'REPAIR_DIR_PATH_WIDGET' ) ) {
 	define( 'REPAIR_DIR_PATH_WIDGET', REPAIR_DIR_PATH_INC.'widgets/' );
 }
 
-
+function repair_admin_script(){
+    wp_enqueue_style( 'repair-admin', get_template_directory_uri().'/assets/css/repair_admin.css', false, '1.0.0' );
+    wp_enqueue_script( 'repair_admin', get_template_directory_uri().'/assets/js/repair_admin.js', false, '1.0.0' );
+}
+add_action( 'admin_enqueue_scripts', 'repair_admin_script' );
 
 
 /**
